@@ -1,0 +1,11 @@
+<h1>All Departments</h1>
+
+<%= link_to 'New Department', new_department_path %>
+<br>
+<br>
+<% @departments.each do |department|%>
+
+<%= link_to department.name, department %>
+
+<% end %>
+

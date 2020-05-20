@@ -1,0 +1,9 @@
+<h1><%= @department.name %> </h1>
+<hr />
+
+<p>Would you like to... <p>
+<p><%= link_to 'View Items', department_items_path(@department) %></p>
+<p><%= link_to 'Edit Department', edit_department_path(@department) %></p>
+<p><%= link_to 'Delete Department', @department, method: :delete %></p>
+<br/>
+<p><%= link_to 'Back to Departments List', root_path %></p>
