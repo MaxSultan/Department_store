@@ -1,9 +1,32 @@
-<h1><%= @department.name %> - <%= @item.name %></h1>
-<p><%= @item.description %></p>
-<%# <% @item.comments.each do |comment| %>
-  <%# <%= render 'comments/comments', { comment: comment } %>
-<%# <% end %> %> %> %>
-<%= link_to 'Edit Item', edit_department_item_path([@department, @item]) %>
-<%= link_to 'Delete Item', [@department, @item], method: :delete %>
-<%= link_to 'Back To Items', department_items_path(@department) %>
-<%# <%= link_to 'New Comment', new_item_comment_path(@item) %> %>
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<nav class = "blue">
+    <ul>
+    <li><a href="#">All Department Stores</a></li>
+    <li><a href="#">Mall Info</a></li>
+    <li><a href="#">Contact Us</a></li>
+    </ul>
+</nav>
+
+<h1 class="center"><%= @department.name %> - <%= @item.name %></h1>
+<hr/>
+
+<div class="container">
+<div class="center">
+    <div class="col s12 m6">
+      <div class="card darken-1">
+        <div class="card-content blue-text">
+          <span class="card-title center"><%= @item.name %></span>
+          <p class="center"><%= @item.description %></p>
+        </div>
+        <div class="card-action center">
+        <%= link_to 'Edit Item', edit_department_item_path([@department, @item]) %>
+        <%= link_to 'Delete Item', [@department, @item], method: :delete %>
+        <%= link_to 'Back To Items', department_items_path(@department) %>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>

@@ -1,9 +1,36 @@
-<h1>Click an Item To View Content</h1>
-<%= link_to 'Create New Item', new_department_item_path(@department) %>
-<ul>
-  <% @items.each do |item| %>
-    <li><%= link_to item.name, [@department, item] %></li>
-  <% end %>
-</ul>
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
 
-<%= link_to @department.name, @department%>
+<nav class = "blue">
+    <ul>
+    <li><a href="#">All Department Stores</a></li>
+    <li><a href="#">Mall Info</a></li>
+    <li><a href="#">Contact Us</a></li>
+    </ul>
+</nav>
+
+<h1 class="center">Click an Item To View Content</h1>
+
+
+<div class= "row">
+  <div class="center">
+    <div class='container'>
+      <div class="card z-depth-3">
+      <div class="card-title">
+        <%= link_to 'Create New Item', new_department_item_path(@department) %>
+        <br>
+        <hr/>
+      </div>
+        <ul class="container">
+          <% @items.each do |item| %>
+            <li><%= link_to item.name, [@department, item] %></li>
+            <hr/>
+          <% end %>
+        </ul>
+
+        <%= link_to @department.name, @department%>
+      </div>
+    </div>
+  </div>
+</div>

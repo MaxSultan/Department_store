@@ -1,11 +1,42 @@
-<h1>All Departments</h1>
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
 
-<%= link_to 'New Department', new_department_path %>
-<br>
-<br>
-<% @departments.each do |department|%>
+<nav class = "blue">
+    <ul>
+    <li><a href="#">All Department Stores</a></li>
+    <li><a href="#">Mall Info</a></li>
+    <li><a href="#">Contact Us</a></li>
+    </ul>
+</nav>
 
-<%= link_to department.name, department %>
+<h1 class="center">All Departments</h1>
 
-<% end %>
-
+<div class="container">
+    <div class="card z-depth-4 center">
+        <div class="center">
+        <div class="container">
+                <br>
+                <a> <%= link_to 'Create New Department', new_department_path %></a>
+                <div style='width: 105px; display:inline-block'></div>
+                <a class="btn-floating yellow darken-4" href="#">
+                    <i class="material-icons">add</i>
+                </a>
+                <br>
+                <br>
+                <hr/>
+                <% @departments.each do |department|%>
+                <div style="min-height: 50px">
+                    <p class="left"><%= link_to department.name, department %> </p>
+                    <a class="btn-floating blue darken-4 right" style="postion: relative; top: 10px" href="#">
+                        <i class="material-icons">pageview</i>
+                    </a>
+                <hr/>
+             
+            </div>
+            <% end %>
+               <br>
+            </div>
+         <div>
+    </div>
+</div>
